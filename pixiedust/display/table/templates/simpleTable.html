@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table class="table table-striped">
+       <thead>
+           {%for field in entity.schema.fields%}
+           <th>{{field.name}}</th>
+           {%endfor%}
+       </thead>
+       <tbody>
+           {%for row in entity.take(100)%}
+           <tr>
+               {%for field in entity.schema.fields%}
+               <td>{{row[field.name]}}</td>
+               {%endfor%}
+           </tr>
+           {%endfor%}
+       </tbody>
+    </table>
+</body>
+</html>

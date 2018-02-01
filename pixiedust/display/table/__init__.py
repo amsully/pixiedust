@@ -17,6 +17,7 @@
 import pixiedust.utils.dataFrameMisc as dataFrameMisc
 from .display import TableDisplay
 from ..display import PixiedustDisplay, addId, DisplayHandlerMeta
+from .SimpleDisplayMeta import SimpleDisplayMeta
 
 @PixiedustDisplay(isDefault=True)
 class TableDisplayMeta(DisplayHandlerMeta):
